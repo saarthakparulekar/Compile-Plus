@@ -1,22 +1,33 @@
 print ('Hello World \n')
+import time
 
 def hello():
-    a=input("enter string to print")
+    a = input("Enter a string to print: ")
     print(a)
 
-ask=input("do you want to print statemnt?(Y or N?)")
-if ask=="Y"or ask=="y" :
+ask = input("Do you want to print a statement? (Y or N): ")
+if ask.lower() == "y":
+    start_time = time.time()
     hello()
-    ask2=input("do you want to print more?(Y or N?)")
-    if ask2=="Y"or ask2=="y":
+    end_time = time.time()
+    print(f"Execution time: {end_time - start_time:.2f} seconds")
+
+    ask2 = input("Do you want to print more? (Y or N): ")
+    if ask2.lower() == "y":
+        start_time = time.time()
         hello()
+        end_time = time.time()
+        print(f"Execution time: {end_time - start_time:.2f} seconds")
     else:
-        print("thankyou")
-    
-    ask3=input("do you want to print more?(Y or N?)")
-    if ask3=="Y"or ask3=="y":
+        print("Thank you!")
+
+    ask3 = input("Do you want to print more? (Y or N): ")
+    if ask3.lower() == "y":
+        start_time = time.time()
         hello()
+        end_time = time.time()
+        print(f"Execution time: {end_time - start_time:.2f} seconds")
     else:
-        print("thankyou!")
+        print("Thank you!")
 else:
-    print ("thankyou!")
+    print("Thank you!")
